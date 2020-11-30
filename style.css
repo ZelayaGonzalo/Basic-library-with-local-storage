@@ -28,7 +28,8 @@ body{
     background-color: #d9f0ffff;
 }
 
-.card{
+.container .card{
+    color:#D9F0FF ;
     position: relative;
     font-family: sans-serif;
     display: flex;
@@ -36,25 +37,99 @@ body{
     flex-direction: column;
     justify-content: space-around;
     margin:1.5em;
-    background-color: #657ED4;
+    background-image: linear-gradient(180deg,#68B684,#657ED4);
     min-height: 30vh;
     height: 50vh;
     max-width: 280px;
     min-width: 170px;
     border-radius: 6%;
+    font-weight: bold;
 }
+.container #addButton{
+    background-color:#68b68562;
+
+}
+.container #addButton #adddButton{
+    height: 10em;
+    width: 10em;
+}
+
 .card #editPencil{
     position: absolute;
     top:-15px;
     left: -15px;
-    height: 3.5em;
-    width: 3.5em;
+    height: 3.2em;
+    width: 3.2em;
+}
+.card #deleteButton{
+    position: absolute;
+    top:-15px;
+    right: -15px;
+    height: 3em;
+    width: 3em;
 }
 
 .card #cardTitle{
-
-    background-color: #261447ff;
+    font-size: 2em;
+    font-family: serif, Helvetica, sans-serif;
+    font-weight: bold;
 }
+
+.formContainer{
+    background-color: rgba(0, 0, 0, 0.473);
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+
+   /* top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);*/
+
+}
+.form{
+    position: relative;
+    color:#D9F0FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(180deg,#68B684,#657ED4);
+    height: 80vh;
+    width: 80vw;
+    max-width: 500px;
+    min-width: 300px;
+    min-height: 200px;
+    max-height: 300px;
+    border-radius: 5%;
+}
+.form #submitButton{
+    /*background-image: url(Images/AddGreen.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 10em;
+    width: 10em;*/
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.form #submitButton #addBookButton{
+    height: 10em;
+    width: 10em;
+
+}
+.form #submitButton span{
+    display: none;}
+
+.form #closePopUp{
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    right: -15px;
+    top:-15px
+}
+
 
 
 
@@ -134,7 +209,7 @@ body{
 
 
 
-
+/* https://coolors.co/efbdeb-f86624-657ed4-68b684-d9f0ff*/
 /* CSS HEX 
 --russian-violet: #261447ff;
 --orange-red: #f86624ff;

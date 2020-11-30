@@ -9,9 +9,11 @@
         <div class="container"> 
             <div class="card">
                 <img src="Images/Pencil greenBackgrpund.png" alt="Edit" id="editPencil">
+                <img src="Images/xButtonRed.png" alt="Delete" id="deleteButton">
                 <div id="cardTitle">
                     Book Title
                 </div>
+                <p>by</p>
                 <div>
                    Charles Jamestow
                 </div>
@@ -24,14 +26,40 @@
                 </div>
 
             </div>
-            <div class="card">color</div>
-            <div class="card">color</div>
-            <div class="card">color</div>
-            <div class="card">color</div>
-            <div class="card">color</div>
-            <div class="card">color</div>
-            <div class="card">color</div>
+            <div class="card" id="addButton">
+                <img src="Images/AddGreen.png" alt="Add another book" id="adddButton">
+            </div>
 
         </div>
+
+        <div class="formContainer">
+            <form class="form">
+                <img src="Images/xButtonRed.png" id="closePopUp">
+                <div>
+                    <h3>Add a new Book</h3>
+                </div>
+                <div>
+                    <label for="name"></label>
+                    <input type="text" name="name" id="bookName" placeholder="Name" required>
+                </div>
+                <div>
+                    <label for="author"></label>
+                    <input type="text" name="author" id="author" placeholder="Author" required>
+                </div>
+                <div>
+                    <label for="pages"> </label>
+                    <input type="number" name="pages" placeholder="Pages" id="pages" min="1" max="999" required>
+                </div>
+                <div>
+                    <label for="read">Read</label>
+                    <input type="checkbox" id="read" name="read">
+                </div>
+                <div>
+                    <button type="submit" id="submitButton" title="add Book"><img src="Images/AddGreen.png" alt="Add Book" id="addBookButton"></button>
+                </div>
+
+            </form>
+        </div>
+
     </body>
 </html>
