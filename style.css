@@ -47,6 +47,32 @@ body{
     font-weight: bold;
 }
 
+.container .card #readPage{
+    color:#157F1F;
+}
+
+.container .unreadCard{
+    color:#D9F0FF ;
+    position: relative;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin:1.5em;
+    background-image: linear-gradient(180deg,#BACDB0,#261447);
+    min-height: 300px;
+    max-height: 400px;
+    height: 50vh;
+    max-width: 280px;
+    min-width: 170px;
+    border-radius: 6%;
+    font-weight: bold;
+}
+.container .unreadCard #readPage{
+    color:#F18805;
+}
+
 .container #card0{
     display: none;
 }
@@ -59,24 +85,25 @@ body{
     width: 10em;
 }
 
-.card #editPencil{
+ #editPencil{
     position: absolute;
     top:-15px;
     left: -15px;
     height: 3.2em;
     width: 3.2em;
 }
-.card #deleteButton{
+
+#deleteButton{
     position: absolute;
     top:-15px;
     right: -15px;
-    height: 3em;
-    width: 3em;
+    height: 2em;
+    width: 2em;
 }
 
-.card #cardTitle{
-    white-space: center;
+ #cardTitle{
     overflow: hidden;
+    text-align: center;
     /*overflow-wrap: break-word;
     word-wrap: break-word;*/
     font-size: 2em;
@@ -86,14 +113,14 @@ body{
 
 .formContainer{
     background-color: rgba(0, 0, 0, 0.473);
-    position: absolute;
-    display: flex;
+    position: fixed;
+    display: none;
     height: 100%;
     width: 100%;
-    justify-content: center;
+   justify-content: center;
     align-items:center;
 
-   /* top:50%;
+    /*top:50%;
     left: 50%;
     transform:translate(-50%,-50%);*/
 
