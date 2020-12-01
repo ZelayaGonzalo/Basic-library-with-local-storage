@@ -15,7 +15,7 @@ body{
     text-align: center;
     margin:0px;
     background-color:#657ED4;
-    min-height: 10vh;
+    min-height: 8vh;
     min-width: 100%;
 }
 .container{
@@ -44,6 +44,10 @@ body{
     min-width: 170px;
     border-radius: 6%;
     font-weight: bold;
+}
+
+.container #card0{
+    display: none;
 }
 .container #addButton{
     background-color:#68b68562;
@@ -78,7 +82,7 @@ body{
 .formContainer{
     background-color: rgba(0, 0, 0, 0.473);
     position: absolute;
-    display: none;
+    display: flex;
     height: 100%;
     width: 100%;
     justify-content: center;

@@ -6,35 +6,35 @@
     </head>
     <body>
         <h1 class="title"> Library</h1>
-        <div class="container"> 
-            <div class="card">
+        <div class="container" id="cardContainer">
+            <div class="card" id="card0">
                 <img src="Images/Pencil greenBackgrpund.png" alt="Edit" id="editPencil">
-                <img src="Images/xButtonRed.png" alt="Delete" id="deleteButton">
+                <img src="Images/xButtonRed.png" alt="Delete" class="deleteCard" id="deleteButton">
                 <div id="cardTitle">
                     Book Title
                 </div>
                 <p>by</p>
-                <div>
+                <div id="cardAuthor">
                    Charles Jamestow
                 </div>
-                <div>
+                <div id="cardPages">
                     50 pages
                 </div>
                 <div>
                     read
-                    <input type="checkbox" disabled="disabled"> 
+                    <input type="checkbox" id="cardCheckBox" disabled="disabled"> 
                 </div>
 
             </div>
             <div class="card" id="addButton">
-                <img src="Images/AddGreen.png" alt="Add another book" id="adddButton">
+                <img src="Images/AddGreen.png" alt="Add another book" id="adddButton" onclick="addBookToLibrary()">
             </div>
 
         </div>
 
-        <div class="formContainer">
+        <div class="formContainer" id="formContainer">
             <form class="form">
-                <img src="Images/xButtonRed.png" id="closePopUp">
+                <img src="Images/xButtonRed.png" id="closePopUp" onclick="closePopUp()">
                 <div>
                     <h3>Add a new Book</h3>
                 </div>
@@ -62,4 +62,6 @@
         </div>
 
     </body>
+
+    <script src="code.js"></script>
 </html>
