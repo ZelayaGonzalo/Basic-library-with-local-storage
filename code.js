@@ -1,9 +1,29 @@
-const form=document.getElementById("formContainer");
-const container=document.getElementById("cardContainer");
-const card=container.childNodes[1];
-/*const xButtonPopUp=form.getElementById("closePopUp");*/
 let myLibrary = [];
 let id=0;
+const formContainer=document.getElementById("formContainer");
+const form=formContainer.querySelector("form");
+/*console.log(form.elements);*/
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  let addBook=new Book();
+  addBook.id=id;
+  addBook.author=form.elements["author"].value;
+  addBook.title=form.elements["bookName"].value;
+  addBook.pages=form.elements["pages"].value;
+  addBook.read=form.elements["read"].checked;
+  myLibrary.push(addBook);
+  addBookToLibrary(addBook);
+  closePopUp();
+  id++;
+  console.log('Form submission cancelled.');
+  console.log(myLibrary);
+});
+const container=document.getElementById("cardContainer");
+const card=container.childNodes[1];
+/*const xButtonPopUp=formContainer.getElementById("closePopUp");*/
+
+
 
 function Book(author,title,pages,read){
     this.author=author
@@ -12,22 +32,21 @@ function Book(author,title,pages,read){
     this.read=read
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(book) {
   let newCard=card.cloneNode(true);
   let childNodes=newCard.children;
-  newCard.id=++id;
+  newCard.id=id;
   container.appendChild(newCard);
-  /*myLibrary.push(book);*/
   for(let i=0;i<childNodes.length;i++){
     switch(childNodes[i].id){
       case "cardTitle":
-        childNodes[i].innerHTML="nuevoTitulo";
+        childNodes[i].innerHTML=book.title;
         break;
       case "cardAuthor":
-        childNodes[i].innerHTML="nuevoAuthor";
+        childNodes[i].innerHTML=book.author;
         break;
       case "cardPages":
-        childNodes[i].innerHTML="nuevoPages";
+        childNodes[i].innerHTML=book.pages+ " pages";
         break;
       case "deleteButton":
         childNodes[i].addEventListener("click",function() {deleteBook(newCard.id)} );
@@ -35,7 +54,7 @@ function addBookToLibrary() {
     }
   }
   container.appendChild(newCard);
-  console.log(newCard);
+  /*console.log(newCard);*/
 
 }
 
@@ -48,10 +67,10 @@ console.log(id);
 
 
 function closePopUp(){
-  form.style.display="none";
+  formContainer.style.display="none";
   console.log("close pop up");
 }
 
 function showPopUp(){
-  form.style.display="flex";
+  formContainer.style.display="flex";
 }
